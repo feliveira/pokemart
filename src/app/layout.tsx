@@ -1,8 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Press_Start_2P } from 'next/font/google'
 import './styles/globals.css'
+import { cn } from '@/lib/utils'
 
-const inter = Inter({ subsets: ['latin'] })
+export const inter = Inter({ 
+  subsets: ['latin'], 
+  weight: ['400', '600', '800'],
+  display: "swap", 
+  variable: '--font-text' 
+})
+
+export const press_start = Press_Start_2P({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-pixelated'
+})
 
 export const metadata: Metadata = {
   title: 'Pokemart',
@@ -16,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={cn(inter.variable, press_start.variable)}>{children}</body>
     </html>
   )
 }

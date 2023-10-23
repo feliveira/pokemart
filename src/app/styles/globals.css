@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* :root {
+  --font-text: var(--font-inconsolata);
+  --font-pixelated: var(--font-press_start);
+
+}
+
+html {
+  font-family: var(--font-text);
+}
+ 
+h1 {
+  font-family: var(--font-pixelated);
+} */
